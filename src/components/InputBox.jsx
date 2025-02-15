@@ -40,7 +40,7 @@ function InputBox({
           value={selectedCurrency}
           onChange={(e) => {
             onCurrencyChange &&
-              onCurrencyChange(Number(e.target.valueAsNumber));
+              onCurrencyChange(e.target.value);
           }}
           disabled={currencyDisabled}
         >
