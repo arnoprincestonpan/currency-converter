@@ -16,7 +16,7 @@ function App() {
 
   // API works by multiplying the Input amount with the the currencyInfo["currency abbreviation in 'aaa'"]
   const convert = () => {
-    setConvertedAmount(amount * currencyInfo[to]);
+    setConvertedAmount((amount * currencyInfo[to]).toFixed(3));
   }
 
   // swap currencies to - from <-> from - to && amount - converted amount <-> converted amount - amount
@@ -68,7 +68,7 @@ function App() {
               type="submit"
               className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
               >
-              Convert
+              Convert {from.toUpperCase()} to {to.toUpperCase()}
               </button>
             </div>
           </form>
